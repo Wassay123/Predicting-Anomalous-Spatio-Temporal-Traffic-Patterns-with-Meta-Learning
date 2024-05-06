@@ -1,23 +1,35 @@
-# Spring-2024-Research
+# Predicting Spatio-Temporal Traffic Patterns with Meta-Learning
 
-# Predicting Spatio-Temporal Traffic Patterns in New York City
+## Overview
 
-## Project Overview
+This repository houses the implementation of a meta-learning framework designed to enhance the performance of spatio-temporal predictive models on anomalous traffic data, such as those observed during the COVID-19 pandemic. The project uses a multi-input convolutional neural network (CNN) that incorporates meta-learning to adapt and predict these unusual traffic patterns effectively.
 
-This research project aims to develop advanced predictive models that utilize a meta-learning approach to understand and forecast spatio-temporal traffic patterns across New York City. By integrating deep learning techniques and leveraging large datasets encompassing various temporal and geographical variables, this initiative seeks to provide insights that can assist in urban planning, traffic management, and policy-making.
+Our work extends the capabilities of traditional traffic prediction models, focusing particularly on the integration of historical traffic data to understand underlying structures that aid in predicting anomalous conditions.
 
-Traffic congestion in urban areas not only causes daily inconvenience but also affects air quality, economic productivity, and accessibility. With New York City's complex traffic dynamics, there is a significant need for more accurate and timely traffic predictions to inform decision-making processes. This project uses multi-input convolutional neural networks (CNNs) and custom layers to handle diverse data inputs, reflecting different times of the year and distinct geographic traffic behaviors within the city.
+## Dataset
 
-## Research Objectives
+The raw traffic data for this project is derived from New York City's open-source Citi Bike dataset. The dataset includes detailed biking trip records, which have been preprocessed into a 2x16x8 tensor format representing inflow and outflow in a grid overlay of Manhattan.
 
-- **Model Development**: To design and refine deep learning models capable of capturing complex patterns in traffic data.
-- **Data Analysis**: To analyze historical traffic data to identify trends, anomalies, and predictors of traffic flow.
-- **Predictive Accuracy**: To improve the accuracy and reliability of traffic predictions to aid real-time traffic management systems.
-- **Meta-Learning Application**: To explore the effectiveness of meta-learning in adapting models to changes in traffic patterns without needing retraining from scratch.
+### Getting the Data
 
-## Expected Impact
+1. Navigate to the `raw_traffic_data` folder in this repository.
+2. Download the pre and post-pandemic traffic datasets from the provided OneDrive link.
+3. Place the downloaded files in the `raw_traffic_data` folder.
 
-The outcomes of this research are expected to contribute to smarter city initiatives by providing tools that can predict and thus mitigate traffic-related issues before they occur. Enhanced predictive capabilities will enable city planners and relevant authorities to deploy resources more efficiently, improve traffic flow, reduce environmental impact, and enhance the quality of life for residents and visitors of New York City.
+For those interested in using a different dataset from the same source, you can obtain additional data sets from [NYC Trip Data](https://s3.amazonaws.com/tripdata/index.html). Use the `raw_data_processing.ipynb` notebook to preprocess this raw data into the required tensor format.
 
-This repository serves as a hub for all project-related code, datasets, and documentation. It is structured to facilitate collaboration, ensure transparency of the research process, and disseminate findings to the broader community.
+## Running the Code
 
+To run the main predictive model:
+1. Ensure that the dataset is correctly placed in the `raw_traffic_data` folder.
+2. Open and run the `main.ipynb` notebook in a Jupyter environment.
+
+This notebook will guide you through the process of using the multi-input CNN model to predict traffic patterns.
+
+## Acknowledgments
+
+Special thanks to Professors Bing Wang and Suining He, and to all contributors and authors whose works have inspired and made this research possible. Their insights into meta-learning and spatio-temporal prediction have been invaluable.
+
+## License
+
+This project is open-sourced under the MIT license. See the LICENSE file for more details.
