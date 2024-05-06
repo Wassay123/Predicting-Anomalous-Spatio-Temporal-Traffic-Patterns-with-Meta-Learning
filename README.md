@@ -6,6 +6,23 @@ This repository houses the implementation of a meta-learning framework designed 
 
 Our work extends the capabilities of traditional traffic prediction models, focusing particularly on the integration of historical traffic data to understand underlying structures that aid in predicting anomalous conditions.
 
+## Installation
+
+This project requires the following dependencies:
+
+- [TensorFlow](https://www.tensorflow.org/install): For building and training deep learning models.
+- [Keras](https://keras.io/getting_started/): High-level neural networks API, used here as part of TensorFlow for model layers and training.
+- [NumPy](https://numpy.org/install/): Essential package for scientific computing with Python.
+- [h5py](http://www.h5py.org/): For handling HDF5 binary data format.
+- [Scikit-Learn](https://scikit-learn.org/stable/install.html): For machine learning tools in Python.
+- [Pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html): For data manipulation and analysis.
+
+To install these dependencies, you can use `pip`:
+
+```bash
+pip install tensorflow keras numpy h5py scikit-learn pandas
+```
+
 ## Dataset
 
 The raw traffic data for this project is derived from New York City's open-source Citi Bike dataset. The dataset includes detailed biking trip records, which have been preprocessed into a 2x16x8 tensor format representing inflow and outflow in a grid overlay of Manhattan.
